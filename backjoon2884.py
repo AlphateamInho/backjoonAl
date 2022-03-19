@@ -6,17 +6,11 @@
 # 첫째 줄에 두 정수 H와 M이 주어진다. 
 # (0 ≤ H ≤ 23, 0 ≤ M ≤ 59) 그리고 이것은 현재 상근이가 설정한 놓은 알람 시간 H시 M분을 의미한다
 
-H = int(input())
-M = int(input())
+H ,M = map(int, input().split())
 
-if(M < 45):
-    if(H == 0 ):
-        H = 23
-        M += 15
-    else:
-        M += 15
-        H -= 1 
+if M > 44:
+    print(H, M-45)
+elif M<45 and H>0:
+    print(H-1,M+15)
 else:
-    M -=45
-print('{0}'.format(H))
-print('{0}'.format(M))
+    print(23,M+15)
