@@ -19,4 +19,5 @@ alphabet = list(range(97,123))  # 아스키코드 숫자 범위
 for i in alphabet :
     print(S.find(chr(i)))
     # find 함수는   존재하는 첫번째 위치를 반환해주며 없다면 -1을 출력한다
-    # S에서 find 한다. chr()은 chr을 인자로 하는 아스키코드값을 다시 문자로 바꿔준다
+    # S에서 find 한다. chr()은 chr을 인자로 하는 아스키코드값을 다시 문자로 바꿔준다.
+    
