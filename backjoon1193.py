@@ -6,23 +6,23 @@
 # 출력
 # 첫째 줄에 분수를 출력한다.
 
+x = int(input())
+num_list = []
 
+num = 0
+num_count = 0
 
-# from cmath import sqrt
-# from math import floor
+while num_count < x:
+    num += 1
+    num_count += num
 
-# X = float(input())
-# Y = float((1/3*X - 1/12)**0.5-1/2)
-# 처음엔 일반항을 구해서 계산으로 풀려고했다. 근데 생각해보니깐 기계한테 일 시키는게 더 편한데
-# 내가 문제를 풀고 있으니깐 억울했다.
-# 심지어 틀렸다..(일반항을 구하는데 있어서 문제를 잘못보고 구해서 조금씩 답이 다르게 나왔다.
-# 그래서 그냥 반복문으로 커지는 간격을 구해서 풀었다. 
+num_count -= num
 
+if num % 2 == 0:
+    i = x - num_count
+    j = num - i + 1
+else:
+    i = num - (x - num_count) + 1
+    j = x - num_count
 
-X = int(input())
-pile = 1  # 벌집의 개수, 1개부터 시작
-cnt = 1
-while X > pile :
-    pile += 6 * cnt  # 벌집이 6의 배수로 증가
-    cnt += 1  # 반복문을 반복하는 횟수
-print(cnt)
+print(f"{i}/{j}")
