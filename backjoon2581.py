@@ -10,3 +10,26 @@
 # M이상 N이하의 자연수 중 소수인 것을 모두 찾아 첫째 줄에 그 합을, 둘째 줄에 그 중 최솟값을 출력한다. 
 # 단, M이상 N이하의 자연수 중 소수가 없을 경우는 첫째 줄에 -1을 출력한다.
 
+M = int(input())
+N = int(input())
+
+sum = 0
+sosu=[]
+
+for number in range(M,N+1):
+  result=0
+  if number >1:
+    for i in range(2,number):
+      if number % i == 0:
+        result+=1
+        break
+    if result == 0:
+      sosu.append(number)
+      sum += number
+
+
+if(len(sosu)>0):
+  print(sum)
+  print(min(sosu))
+else:
+  print(-1)
